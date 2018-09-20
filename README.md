@@ -37,6 +37,7 @@ when writing write without commas (delimited by tabs)
     newDataDF.show()                                    // show contents
 
 
+Avg of data 
 
 rdd3 = sc.textFile("/user/cloudera/test/*")
 
