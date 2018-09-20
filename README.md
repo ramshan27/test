@@ -35,3 +35,13 @@ when writing write without commas (delimited by tabs)
     val newDataDF = sqlContext.
                     read.parquet("data.parquet")        // read back parquet to DF
     newDataDF.show()                                    // show contents
+
+
+
+rdd3 = sc.textFile("/user/cloudera/test/*")
+
+
+
+rdd3 = rdd3.map( lambda rec : (str(rec.split(",")[0])+str(rec.split(",")[1]) ,str(rec)) )
+
+rdd3 = rdd3.countByKey()
